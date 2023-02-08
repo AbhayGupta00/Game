@@ -58,6 +58,8 @@ public class SnakeAndLadder {
 				|| playAgainSL.equals("y")) {
 			System.out.println("Type the level you want to play /n 1.EASY /n 2. MEEDIUM /n 3.HARD /n 4. EXIT ");
 			String level = myInput.next();
+			if(level.equalsIgnoreCase("exit")) {return level;}
+			else {
 			if (level.equalsIgnoreCase("easy")) {
 				laddercount = 6;
 				snakecount = 2;
@@ -70,7 +72,6 @@ public class SnakeAndLadder {
 				snakecount = 6;
 
 			} 
-			
 			else {
 				laddercount = 4;
 				snakecount = 4;
@@ -258,20 +259,18 @@ public class SnakeAndLadder {
 
 			}
 			b = 111;
-		}
+		}}
 		return playAgainSL;
 
 	}
 
-	private static void exit(int i) {
-		// TODO Auto-generated method stub
+	private static void exit() {
+		exit();
+	
 		
 	}
 
-	private static void exit() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 	// -------------------------------------------------------------------Generate
 	// Snake and Ladder
